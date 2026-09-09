@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "segy-qc-toolkit"
+version = "0.2.0"
+description = "SEG-Y QC toolkit with a Tkinter GUI and CLI, built on a reusable QC engine"
+requires-python = ">=3.9"
+dependencies = [
+    "segyio>=1.9.11",
+    "numpy>=1.24",
+    "matplotlib>=3.7",
+]
+
+[project.scripts]
+segy-qc = "segyqc.gui.app:main"
+
+[tool.setuptools]
+packages = ["segyqc", "segyqc.gui"]
